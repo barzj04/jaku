@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Jaku · Learn Borneo's indigenous languages</title>
+  <meta name="description" content="An AI-assisted tutor for Iban and Kadazan-Dusun: flashcards, quizzes and pronunciation feedback.">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <header class="top">
+    <div class="brand">
+      <svg class="logo" viewBox="0 0 32 32" aria-hidden="true"><path d="M16 2 30 16 16 30 2 16Z" /><path d="M16 9 23 16 16 23 9 16Z" class="inner" /></svg>
+      <div>
+        <h1>Jaku</h1>
+        <p class="tag">Learn Borneo's indigenous languages</p>
+      </div>
+    </div>
+    <label class="lang">
+      <span class="small muted">Language</span>
+      <select id="lang" aria-label="Language"></select>
+    </label>
+  </header>
+
+  <nav class="tabs" aria-label="Sections">
+    <button class="tab active" data-view="learn">Learn</button>
+    <button class="tab" data-view="quiz">Quiz</button>
+    <button class="tab" data-view="speak">Speak</button>
+  </nav>
+
+  <main>
+    <p id="load-error" class="panel error hidden">Couldn't load the phrase list. Make sure the server is running (<code>node server.js</code>).</p>
+
+    <!-- LEARN -->
+    <section id="view-learn" class="view active">
+      <div class="toolbar">
+        <select id="category" aria-label="Topic"></select>
+        <span id="card-count" class="muted small"></span>
+      </div>
+      <div id="card" class="card" role="button" tabindex="0" aria-live="polite" aria-label="Flashcard, press to reveal meaning">
+        <span class="badge" id="card-badge"></span>
+        <p class="native big" id="card-native"></p>
+        <p class="muted small reveal-hint">Tap to reveal</p>
+        <div class="card-back">
+          <p class="en" id="card-en"></p>
+          <p class="ms" id="card-ms"></p>
+          <p class="notes" id="card-notes"></p>
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn ghost" id="prev" aria-label="Previous card">← Prev</button>
+        <button class="btn" id="practise">Practise speaking</button>
+        <button class="btn ghost" id="next" aria-label="Next card">Next →</button>
+      </div>
+    </section>
+
+    <!-- QUIZ -->
+    <section id="view-quiz" class="view">
+      <div id="quiz-start" class="panel">
+        <h2>Quick quiz</h2>
+        <p class="muted">Five questions, planned around phrases you've missed before. The AI only picks <em>which</em> phrases to ask. Every word you see comes from Jaku's phrase list, never from the AI.</p>
+        <button class="btn" id="quiz-go">Start quiz</button>
+      </div>
+      <div id="quiz-run" class="panel hidden">
+        <div class="quiz-meta">
+          <span id="quiz-progress" class="small muted"></span>
+          <span class="badge" id="quiz-source"></span>
+        </div>
+        <p class="small muted" id="quiz-label"></p>
+        <p class="prompt" id="quiz-prompt"></p>
+        <p class="hint hidden" id="quiz-hint"></p>
+        <div class="options" id="quiz-options"></div>
+        <button class="btn hidden" id="quiz-next">Next</button>
+      </div>
+      <div id="quiz-done" class="panel hidden">
+        <h2 id="quiz-score"></h2>
+        <p class="muted" id="quiz-summary"></p>
+        <button class="btn" id="quiz-again">Try another quiz</button>
+      </div>
+    </section>
+
+    <!-- SPEAK -->
+    <section id="view-speak" class="view">
+      <div class="panel">
+        <label class="small muted" for="speak-phrase">Phrase to practise</label>
+        <select id="speak-phrase"></select>
+        <p class="native big" id="speak-target"></p>
+        <p class="muted" id="speak-meaning"></p>
+        <button class="btn mic" id="record"><span class="dot"></span><span id="record-label">Tap to record</span></button>
+        <p class="small muted" id="speak-status" aria-live="polite"></p>
+        <div id="speak-result" class="hidden">
+          <div class="meter"><div id="meter-fill"></div></div>
+          <p class="score-line"><strong id="speak-score"></strong> <span id="speak-verdict"></span></p>
+          <p class="small muted">Heard: “<span id="speak-heard"></span>”</p>
+          <div class="chips" id="speak-words"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Phrase data is a starter set awaiting native-speaker review. Entries marked <span class="badge warn">unverified</span> may contain errors.</p>
+  </footer>
+
+  <script src="/js/score.js"></script>
+  <script src="/js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+{
+  "languages": {
+    "iban": {
+      "name": "Iban",
+      "region": "Sarawak",
+      "phrases": [
+        { "id": "iban-001", "native": "Selamat pagi", "en": "Good morning", "ms": "Selamat pagi", "category": "greetings", "notes": "Same as Malay.", "verified": false, "source": "" },
+        { "id": "iban-002", "native": "Kati berita nuan?", "en": "How are you?", "ms": "Apa khabar?", "category": "greetings", "notes": "Literally 'what is your news?'", "verified": false, "source": "" },
+        { "id": "iban-003", "native": "Berita manah", "en": "I'm fine", "ms": "Khabar baik", "category": "greetings", "notes": "Literally 'good news'.", "verified": false, "source": "" },
+        { "id": "iban-004", "native": "Terima kasih", "en": "Thank you", "ms": "Terima kasih", "category": "greetings", "notes": "", "verified": false, "source": "" },
+        { "id": "iban-005", "native": "Sapa nama nuan?", "en": "What is your name?", "ms": "Siapa nama awak?", "category": "introductions", "notes": "Nuan = you (polite).", "verified": false, "source": "" },
+        { "id": "iban-006", "native": "Nama aku Ali", "en": "My name is Ali", "ms": "Nama saya Ali", "category": "introductions", "notes": "Aku = I / me.", "verified": false, "source": "" },
+        { "id": "iban-007", "native": "Udah makai?", "en": "Have you eaten?", "ms": "Sudah makan?", "category": "daily life", "notes": "A common friendly greeting.", "verified": false, "source": "" },
+        { "id": "iban-008", "native": "Kini nuan?", "en": "Where are you going?", "ms": "Awak nak ke mana?", "category": "daily life", "notes": "", "verified": false, "source": "" },
+        { "id": "iban-009", "native": "Au", "en": "Yes", "ms": "Ya", "category": "basics", "notes": "", "verified": false, "source": "" },
+        { "id": "iban-010", "native": "Enda", "en": "No / not", "ms": "Tidak", "category": "basics", "notes": "", "verified": false, "source": "" },
+        { "id": "iban-011", "native": "Ai", "en": "Water", "ms": "Air", "category": "basics", "notes": "", "verified": false, "source": "" },
+        { "id": "iban-012", "native": "Rumah panjai", "en": "Longhouse", "ms": "Rumah panjang", "category": "culture", "notes": "The traditional communal home of Iban families.", "verified": false, "source": "" },
+        { "id": "iban-013", "native": "Indai", "en": "Mother", "ms": "Ibu", "category": "family", "notes": "", "verified": false, "source": "" },
+        { "id": "iban-014", "native": "Apai", "en": "Father", "ms": "Bapa", "category": "family", "notes": "", "verified": false, "source": "" },
+        { "id": "iban-015", "native": "Selamat Hari Gawai", "en": "Happy Gawai (harvest festival)", "ms": "Selamat Hari Gawai", "category": "culture", "notes": "Gawai Dayak is celebrated on 1 June.", "verified": false, "source": "" }
+      ]
+    },
+    "dusun": {
+      "name": "Kadazan-Dusun",
+      "region": "Sabah",
+      "phrases": [
+        { "id": "dusun-001", "native": "Kopivosian", "en": "Hello / greetings", "ms": "Salam sejahtera", "category": "greetings", "notes": "", "verified": false, "source": "" },
+        { "id": "dusun-002", "native": "Nunu habar?", "en": "How are you?", "ms": "Apa khabar?", "category": "greetings", "notes": "", "verified": false, "source": "" },
+        { "id": "dusun-003", "native": "Osonong", "en": "Good / fine", "ms": "Baik", "category": "greetings", "notes": "", "verified": false, "source": "" },
+        { "id": "dusun-004", "native": "Kotohuadan", "en": "Thank you", "ms": "Terima kasih", "category": "greetings", "notes": "Kadazan form. Many Dusun speakers say 'Ounsikou'.", "verified": false, "source": "" },
+        { "id": "dusun-005", "native": "Isai ngaran nu?", "en": "What is your name?", "ms": "Siapa nama awak?", "category": "introductions", "notes": "", "verified": false, "source": "" },
+        { "id": "dusun-006", "native": "Mongoi ko hinoh?", "en": "Where are you going?", "ms": "Awak nak ke mana?", "category": "daily life", "notes": "", "verified": false, "source": "" },
+        { "id": "dusun-007", "native": "Waig", "en": "Water", "ms": "Air", "category": "basics", "notes": "", "verified": false, "source": "" },
+        { "id": "dusun-008", "native": "Aiso", "en": "There is none", "ms": "Tiada", "category": "basics", "notes": "", "verified": false, "source": "" },
+        { "id": "dusun-009", "native": "Tina", "en": "Mother", "ms": "Ibu", "category": "family", "notes": "", "verified": false, "source": "" },
+        { "id": "dusun-010", "native": "Tama", "en": "Father", "ms": "Bapa", "category": "family", "notes": "", "verified": false, "source": "" },
+        { "id": "dusun-011", "native": "Kotobian Tadau Tagazo do Kaamatan", "en": "Happy Harvest Festival", "ms": "Selamat Hari Kaamatan", "category": "culture", "notes": "Kaamatan is celebrated throughout May.", "verified": false, "source": "" }
+      ]
+    }
+  }
+}
