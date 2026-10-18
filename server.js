@@ -15,9 +15,9 @@ if (fs.existsSync(envPath)) {
 const PORT = process.env.PORT || 3000;
 const PUBLIC = path.join(__dirname, 'public');
 const ROUTES = {
-  '/api/phrases': './api/phrases',
-  '/api/quiz': './api/quiz',
-  '/api/transcribe': './api/transcribe',
+  '/api/phrases': require('./api/phrases'),
+  '/api/quiz': require('./api/quiz'),
+  '/api/transcribe': require('./api/transcribe'),
 };
 const TYPES = {
   '.html': 'text/html; charset=utf-8', '.css': 'text/css', '.js': 'text/javascript',
@@ -39,7 +39,7 @@ http.createServer(async (req, res) => {
     }
     const raw = Buffer.concat(chunks).toString('utf8');
     try { req.body = raw ? JSON.parse(raw) : {}; } catch { return res.status(400).json({ error: 'invalid JSON' }); }
-    try { await require(ROUTES[url.pathname])(req, res); } catch (e) {
+    try { await ROUTES[url.pathname](req, res); } catch (e) {
       console.error(e);
       if (!res.headersSent) res.status(500).json({ error: 'server error' });
     }
